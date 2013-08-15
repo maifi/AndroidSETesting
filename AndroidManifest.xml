@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.test_se"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="17" />
+
+     <uses-permission android:name="android.permission.NFC" />
+ <uses-permission android:name = "android.permission.INTERNET"/>
+ <uses-permission android:name = "android.permission.ACCESS_NETWORK_STATE"/> 
+ <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+         <activity android:name="com.example.SkyTrustMainActivity"  />
+        <activity
+            android:name="com.example.test_se.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="at.iaik.skytrust.element.activities.ActivityNFCTouchTag"
+            android:label="@string/title_activity_activity_nfctouch_tag" >
+        </activity>
+        
+        <activity
+            android:name="at.iaik.skytrust.sampleapp.LoginActivity"
+            android:label="LoginActivity" >
+        </activity>
+        
+        <activity
+             android:name="at.iaik.at.iaik.skytrust.MainActivity"
+            android:label="SkytrustApp" >
+        </activity>
+    </application>
+
+</manifest>
